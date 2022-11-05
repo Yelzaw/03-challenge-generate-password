@@ -18,4 +18,6 @@ MIT License
 ## Completed Works - Link and Screenshot
 
 - https://yelzaw.github.io/03-challenge-generate-password/
-<img src="/assets/images/password " width="500" alt="Screenshot of webpage">
+<img src="/assets/images/password.jpg" width="500" alt="Screenshot of webpage">
+
+![alt text](/Assets/images/password.jpg)
