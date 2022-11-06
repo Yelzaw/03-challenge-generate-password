@@ -115,11 +115,12 @@ var n = arr.length;              // Length of the array
   }
 
 chooseChars = arr.join('');      // Convert Array to string
+window.alert("Your password is "+chooseChars);
 return chooseChars;              // Return shuffled string
 };
 
-  finalPassword = shuffle(chooseChars);
-  window.alert ("Your password is "+finalPassword);
+  finalPassword = shuffle(chooseChars); 
+  
   return(finalPassword);
 }
 
