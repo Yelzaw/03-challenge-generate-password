@@ -22,4 +22,4 @@ MIT License
 
 - Screenshot of webpage
 
-![alt text](/assets/images/password.jpg)
+![alt text](./images/password.jpg)
