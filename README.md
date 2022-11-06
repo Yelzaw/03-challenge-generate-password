@@ -9,7 +9,7 @@ The challenge of this week is to modify starter code to create an application th
 - UNB Coding Bootcamp: Class Materials <br />
 (Especially the advice of the Bootcamp Instructor that to use console.log a lot.)
 - Google Search Materials
-- Discussion of people on slack forum
+- Discussion of people on https://stackoverflow.com/
 - https://www.w3schools.com
 
 ## License
