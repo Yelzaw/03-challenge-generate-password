@@ -6,8 +6,8 @@ The challenge of this week is to modify starter code to create an application th
 
 ## Credit
 
-- UNB Coding Bootcamp: Class Materials 
-    (especially guid)
+- UNB Coding Bootcamp: Class Materials <br />
+(Especially the advice of the Bootcamp Instructor that to use console.log a lot.)
 - Google Search Materials
 - Discussion of people on slack forum
 - https://www.w3schools.com
@@ -22,4 +22,4 @@ MIT License
 
 - Screenshot of webpage
 
-![alt text](/Assets/images/password.jpg)
+![alt text](/assets/images/password.jpg)
