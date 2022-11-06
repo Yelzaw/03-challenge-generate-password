@@ -31,6 +31,7 @@ var generatePassword = function() {
   var countItem = Object.keys(objUserchoice).length; //find out how many criteria were selected
   var percentChars = [];
   var chooseChars ="";
+
   //(All criteria) Based on users' choice, will find a random percentage first for each criteria and then will find random letters for each category to get a string for the initial password.
   if (countItem==4) { 
     // collects random percentage of each criteria and stored as array, adujsted in code to make sure to get at least 1 for each category
@@ -38,6 +39,7 @@ var generatePassword = function() {
     percentChars[1] = (1+Math.floor((Math.random() * (saveLast+1-percentChars[0]))));
     percentChars[2] = (1+Math.floor((Math.random() * (saveLast+2-percentChars[1]-percentChars[0]))));
     percentChars[3] = (pwdLength - percentChars[2] - percentChars[1]-percentChars[0]);
+
     //based on percentage of each category, find random letters and store as string
     for (var i = 0; i < percentChars[0]; i++) {
         var randomNumber = Math.floor(Math.random() * arrayUserchoice[0].length);
@@ -77,7 +79,7 @@ var generatePassword = function() {
   // If user selected 2 Criterias, generate random letters from only 2
   else if (countItem==2) {
     percentChars[0] = (1+Math.floor((Math.random() * (saveLast))));               
-    percentChars[2] = (pwdLength - percentChars[0]);
+    percentChars[1] = (pwdLength - percentChars[0]);
     for (var i = 0; i < percentChars[0]; i++) {
         var randomNumber = Math.floor(Math.random() * arrayUserchoice[0].length);
         chooseChars += arrayUserchoice[0].substring(randomNumber, randomNumber +1);
@@ -115,9 +117,8 @@ var n = arr.length;              // Length of the array
 chooseChars = arr.join('');      // Convert Array to string
 return chooseChars;              // Return shuffled string
 };
-
+window.alert ("Your password is "+chooseChars)
   finalPassword = shuffle(chooseChars);
-  window.alert ("Your password is "+finalPassword)
   return(finalPassword);
 }
 
@@ -127,7 +128,7 @@ function writePassword() {
   var password = generatePassword();
   
   var passwordText = document.querySelector("#password");
-  passwordText.value = password;  
+  passwordText.value = password;    
 }
 
 // Add event listener to generate button
