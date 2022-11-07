@@ -7,7 +7,7 @@ var generatePassword = function() {
   window.alert("Please answer the questions for password criteria to generate the right password for you.")
   var pwdLength = window.prompt("What is the length of password you would prefer? Please choose between 8 to 256.");
     
-  //Collect the set of criteria from user, and store all characters as object by category (array can be used directly to minize some codes) 
+  //Collect the set of criteria from user, and store all characters as object by category (array can be used directly to minimize some codes) 
   if (pwdLength >= 8 && pwdLength <= 256) {
     var lwrCase = window.confirm("Do you want lowercase letters in your password?");
     if (lwrCase == true) {
@@ -23,7 +23,8 @@ var generatePassword = function() {
     };
     var special = window.confirm("Do you want special characters in your password?");
     if (special == true) {
-        objUserchoice.specialLetter = "!#$%&'()*+,-./:;<=>?@]\[^_`{|}~"; 
+        objUserchoice.specialLetter = "!#$%&'()*+,-./:;<=>?@]\[^_`{|}~";
+        objUserchoice.specialLetter += '"';
     };
     var arrayUserchoice = (Object.values(objUserchoice)); // transferred values of object to array
   }    
@@ -32,7 +33,7 @@ var generatePassword = function() {
   var percentChars = [];
   var chooseChars ="";
 
-  //(All criteria) Based on users' choice, will find a random percentage first for each criteria and then will find random letters for each category to get a string for the initial password.
+  //(All criteria) Based on users' choice, will find a random percentage for each criteria and then will find random letters for each category to get a string for the initial password.
   if (countItem==4) { 
     // collects random percentage of each criteria and stored as array, adujsted in code to make sure to get at least 1 for each category
     percentChars[0] = (1+Math.floor((Math.random() * (saveLast))));
@@ -40,7 +41,7 @@ var generatePassword = function() {
     percentChars[2] = (1+Math.floor((Math.random() * (saveLast+2-percentChars[1]-percentChars[0]))));
     percentChars[3] = (pwdLength - percentChars[2] - percentChars[1]-percentChars[0]);
 
-    //based on percentage of each category, find random letters and store as string
+    //based on percentage of each category, find the random letters and store as string
     for (var i = 0; i < percentChars[0]; i++) {
         var randomNumber = Math.floor(Math.random() * arrayUserchoice[0].length);
         chooseChars += arrayUserchoice[0].substring(randomNumber, randomNumber +1);
