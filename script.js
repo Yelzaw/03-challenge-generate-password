@@ -9,19 +9,19 @@ var generatePassword = function() {
     
   //Collect the set of criteria from user, and store all characters as object by category (array can be used directly to minimize some codes) 
   if (pwdLength >= 8 && pwdLength <= 256) {
-    var lwrCase = window.confirm("Do you want lowercase letters in your password?");
+    var lwrCase = window.confirm("Would you like to have lowercase letters in your password?");
     if (lwrCase == true) {
         objUserchoice.lwrLetter="abcdefghijklmnopqrstuvwxyz";            
     };
-    var uppCase = window.confirm("Do you want uppercase letters in your password?");
+    var uppCase = window.confirm("Would you like to have uppercase letters in your password?");
     if (uppCase == true) {
         objUserchoice.uppLetter = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     };
-    var number = window.confirm("Do you want numbers in your password?");
+    var number = window.confirm("Would you like to have numeric letters in your password?");
     if (number== true) {
         objUserchoice.numLetter ="0123456789";
     };
-    var special = window.confirm("Do you want special characters in your password?");
+    var special = window.confirm("Would you like to have special characters in your password?");
     if (special == true) {
         objUserchoice.specialLetter = "!#$%&'()*+,-./:;<=>?@]\[^_`{|}~";
         objUserchoice.specialLetter += '"';
