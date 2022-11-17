@@ -18,8 +18,8 @@ MIT License
 
 ## Completed Works - Link and Screenshot
 
-- https://yelzaw.github.io/03-challenge-generate-password/
+- https://yelzaw.github.io/password-generator-with-javascript/
 
 - Screenshot of webpage
 
-![alt text](./images/password.jpg)
+![alt text](./assets/images/password.jpg)
