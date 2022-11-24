@@ -5,10 +5,20 @@ var generatePassword = function() {
   const objUserchoice ={};   
   // Reminder for user about require to answer the questions and clarify on critieria to set password's rules
   window.alert("Please answer the questions for password criteria to generate the right password for you.")
-  var pwdLength = window.prompt("What is the length of password you would prefer? Please choose between 8 to 256.");
-    
+  var pwdLength = window.prompt("What is the length of password you would prefer? Please choose between 8 to 128.");
+
+  // if the value of password length is low or high, alert will prompt the user
+  if (pwdLength < 8) {
+    window.alert ("The input value for password length is too low. Please try it again");   
+    return
+  } 
+  else if (pwdLength>128) {
+    window.alert ("The input value for password length is too high. Please try it again");
+    return
+  }
+
   //Collect the set of criteria from user, and store all characters as object by category (array can be used directly to minimize some codes) 
-  if (pwdLength >= 8 && pwdLength <= 256) {
+  if (pwdLength >= 8 && pwdLength <= 128) {
     var lwrCase = window.confirm("Would you like to have lowercase letters in your password?");
     if (lwrCase == true) {
         objUserchoice.lwrLetter="abcdefghijklmnopqrstuvwxyz";            
@@ -98,7 +108,7 @@ var generatePassword = function() {
         chooseChars += arrayUserchoice[0].substring(randomNumber, randomNumber +1);
     };
   }  
-  else window.alert ("The input value is not valid. Please try againg!"); // If user have selcted password length out of 8 to 256, this will prompt to user.
+
 // Shuffle function for initial password shuffle into random string and to be final password
 function shuffledChars(n) {
   return Math.floor(Math.random() * n);
@@ -116,7 +126,6 @@ var n = arr.length;              // Length of the array
   }
 
 chooseChars = arr.join('');      // Convert Array to string
-window.alert("Your password is "+chooseChars);
 return chooseChars;              // Return shuffled string
 };
 
